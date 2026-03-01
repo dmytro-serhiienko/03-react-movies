@@ -1,5 +1,5 @@
 import axios from "axios";
-import type { Movie } from "../components/types/movie";
+import type { Movie } from "../types/movie";
 
 interface MovieResponse {
   results: Movie[];
@@ -11,7 +11,7 @@ export async function fetchMovies(query: string): Promise<Movie[]> {
     `https://api.themoviedb.org/3/search/movie?query=${query}&include_adult=false&language=en-US&page=1`,
     {
       params: {
-        // твої параметри
+        // твої параметри...
       },
       headers: {
         Authorization: `Bearer ${API_TOKEN}`,
